@@ -1,0 +1,42 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.card {
+	background-color: $background-color-light;
+	color: $text-color;
+	border: $border-width-thin solid $neutral-color;
+	border-radius: $border-radius-sm;
+	box-shadow: $shadow-light-md;
+}
+
+.card-header {
+	display: flex;
+	flex-direction: column;
+	padding: $padding-sm;
+	@include space-y(1.5);
+}
+
+.card-title {
+	font-size: $font-size-lg;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+	letter-spacing: $letter-spacing-normal;
+	color: $text-color;
+}
+
+.card-description {
+	font-size: $font-size-sm;
+	color: $text-color-neutral;
+}
+
+.card-content {
+	padding: $padding-sm;
+	padding-top: 0;
+}
+
+.card-footer {
+	display: flex;
+	align-items: center;
+	padding: $padding-sm;
+	padding-top: 0;
+}

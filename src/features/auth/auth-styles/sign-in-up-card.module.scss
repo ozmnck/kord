@@ -1,0 +1,67 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.card {
+	width: 340px;
+	height: 100%;
+	padding: $padding-sm;
+	@include py($padding-sm);
+}
+
+.card-header {
+	@include px(0);
+	padding-top: 0;
+}
+
+.card-content {
+	@include py($padding-sm);
+}
+
+.form-container {
+	@include space-y($padding-sm);
+	padding-top: 0;
+}
+
+.input-field {
+	color: $text-color;
+	font-size: $font-size-base;
+}
+
+.button {
+	width: 100%;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	gap: $gap-sm;
+}
+
+.button-branded {
+	width: 100%;
+	position: relative;
+}
+
+.button-icon {
+	width: 16px;
+	height: 16px;
+	left: 6px;
+	top: 8px;
+	position: absolute;
+}
+
+.sign-up-text {
+	font-size: $font-size-xs;
+	color: $text-color-neutral;
+}
+
+.sign-up-link {
+	font-size: $font-size-xs;
+	color: darken($secondary-color, 20%);
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+		color: $secondary-color;
+	}
+}

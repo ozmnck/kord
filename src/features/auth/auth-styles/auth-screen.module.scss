@@ -1,0 +1,17 @@
+@import '@/styles/_variables';
+@import '@/styles/_mixins';
+
+.authScreen {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: $background-color;
+}
+
+.authForm {
+	@include respond-to(md) {
+		width: 420px;
+		height: auto;
+	}
+}

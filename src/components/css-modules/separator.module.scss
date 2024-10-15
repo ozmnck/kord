@@ -1,0 +1,6 @@
+@import '@/styles/_variables.scss';
+
+.separatorHorizontal {
+	margin: $spacing-md 0;
+	border-bottom: $border-width-thin solid $border-color;
+}

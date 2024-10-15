@@ -1,0 +1,132 @@
+// ======= Медиазапросы =======
+// Упрощенные медиазапросы для адаптивной верстки
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == xs {
+		@media (max-width: $breakpoint-xs) {
+			@content;
+		}
+	} @else if $breakpoint == sm {
+		@media (max-width: $breakpoint-sm) {
+			@content;
+		}
+	} @else if $breakpoint == md {
+		@media (max-width: $breakpoint-md) {
+			@content;
+		}
+	} @else if $breakpoint == lg {
+		@media (max-width: $breakpoint-lg) {
+			@content;
+		}
+	} @else if $breakpoint == xl {
+		@media (max-width: $breakpoint-xl) {
+			@content;
+		}
+	}
+}
+
+// ======= Миксины для управления отступами =======
+
+// Миксин для вертикальных отступов между элементами
+@mixin space-y($size) {
+	> * {
+		margin-top: $size; // Устанавливает верхний отступ для всех дочерних элементов
+	}
+	> *:first-child {
+		margin-top: 0; // Убирает верхний отступ у первого элемента
+	}
+}
+
+// Миксин для горизонтальных отступов между элементами
+@mixin space-x($size) {
+	display: flex; // Устанавливает flex-контейнер для горизонтального выравнивания
+	> * {
+		margin-right: $size; // Устанавливает правый отступ для всех дочерних элементов
+	}
+	> *:last-child {
+		margin-right: 0; // Убирает правый отступ у последнего элемента
+	}
+}
+
+// ======= Миксины для управления отступами =======
+
+// Миксин для горизонтальных отступов между элементами
+@mixin px($size) {
+	display: flex; // Устанавливает flex-контейнер для горизонтального выравнивания
+	> * {
+		margin-left: $size; // Устанавливает левый отступ для всех дочерних элементов
+	}
+	> *:first-child {
+		margin-left: 0; // Убирает левый отступ у первого элемента
+	}
+}
+
+// Миксин для вертикальных отступов между элементами
+@mixin py($size) {
+	> * {
+		margin-top: $size; // Устанавливает верхний отступ для всех дочерних элементов
+	}
+	> *:first-child {
+		margin-top: 0; // Убирает верхний отступ у первого элемента
+	}
+}
+
+// ======= Тени =======
+// Миксин для теней (универсальный)
+@mixin box-shadow($shadow) {
+	box-shadow: $shadow;
+}
+
+// ======= Скругление углов =======
+// Миксин для радиусов границ
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+// ======= Шрифты =======
+// Миксин для установки шрифтов
+@mixin font-settings(
+	$size,
+	$weight: $font-weight-regular,
+	$line-height: $line-height-base
+) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+}
+
+// ======= Границы =======
+// Миксин для универсальных границ
+@mixin border(
+	$width: $border-width-thin,
+	$style: solid,
+	$color: $border-color
+) {
+	border-width: $width;
+	border-style: $style;
+	border-color: $color;
+}
+
+// ======= Анимации =======
+// Миксин для универсальных переходов
+@mixin transition(
+	$properties: all,
+	$duration: 0.3s,
+	$timing-function: ease-in-out
+) {
+	transition: $properties $duration $timing-function;
+}
+
+// ======= Центрирование =======
+// Горизонтальное и вертикальное центрирование
+@mixin center-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// ======= Адаптивные изображения =======
+// Миксин для установки изображения на весь блок
+@mixin responsive-image {
+	max-width: 100%;
+	height: auto;
+}
